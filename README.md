@@ -4,8 +4,20 @@
 shell상에서 webpack-dev-server 명령어가 아닌 gulp 명령어만을 통해 webpack-dev-server 및 browser-sync가 실행되므로 static 파일들에 대한 자동화된 빌드환경을 구축할 수 있습니다.
 
 ## Install
+#### [GitHub](https://github.com/biodic/biodic-webpack-starter)
 ```
-npm install --save biodic-webpack-starter
+$ git clone https://github.com/biodic/biodic-webpack-starter
+$ cd biodic-webpack-starter
+$ npm install
+```
+
+#### [npm](https://www.npmjs.com/package/biodic-webpack-starter)
+```
+$ npm install biodic-webpack-starter
+$ cd 
+$ cp -a node_modules/biodic-webpack-starter/* ./; cp node_modules/biodic-webpack-starter/.* ./
+$ npm install
+
 ```
 
 ### Directory structure
