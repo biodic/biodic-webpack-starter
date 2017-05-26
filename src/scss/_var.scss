@@ -1,0 +1,85 @@
+$theme-color:#303f9f;
+$theme-color-hover:#286090;
+
+$default-font: '맑은고딕','Malgun Gothic',Dotum,'돋움';
+$default-size: 16px;
+$default-color:#333333;
+$default-a-color:#2f2f2f;
+
+$c-strong: #212872;
+
+$c-blue: #26a2e9;
+$c-green: #3cb878;
+$c-band: #61c47b;
+$c-orange: #f79037;
+$c-red: #e64939;
+$c-black: #333;
+$c-gray: #666;
+$c-lightgray: #999;
+$c-pink: #ff3b30;
+$c-lightblue: #5ac8fa;
+$c-yellow: #fcc00;
+
+$bg-1: #f3f4f6;
+$bg-2: #999;
+$bg-3: #666;
+$bg-4: #333;
+$bgGray: #ececec;
+$bgBlue: #303f9f;
+
+$border-color-1: #999;
+
+$fa-margin: 10px;	// 아이콘폰트 좌측 및 우측 텍스트와의 간격
+$border-color: rgba(0, 0, 0, 0.12);
+
+@mixin transition($attr,$sec,$ease) {
+	@if($sec=="") {
+		$sec:0.3;
+	}
+	-webkit-transition: $attr unquote($sec+'s') unquote($ease);
+	-moz-transition: $attr unquote($sec+'s') unquote($ease);
+	-ms-transition: $attr unquote($sec+'s') unquote($ease);
+	-o-transition: $attr unquote($sec+'s') unquote($ease);
+	transition: $attr unquote($sec+'s') unquote($ease);
+}
+
+@mixin transform($attr) {
+	-webkit-transform:unquote($attr);
+	-moz-transform:unquote($attr);
+	-o-transform:unquote($attr);
+	-ms-transform:unquote($attr);
+	transform:scaleunquote($attr);
+}
+
+@mixin respond-to($media) {
+	@if ($media == md) {
+		@media (max-width:1199px ) { @content; }
+	}
+	@else if ($media == sm) {
+		@media (max-width:991px ) { @content; }
+	}
+	@else if ($media == xs) {
+		@media (max-width:767px ) { @content; }
+	}
+	@else if ($media == sidebar) {
+		@media (max-width:900px ) { @content; }
+	}
+	@else if ($media == mobile) {
+		@media (max-width:480px ) { @content; }
+	}
+	@else if ($media == ipad) {
+		@media (min-width:768px ) and (max-width:768px ) { @content; }
+	}
+	@else  {
+		@media (max-width:$media ) { @content; }
+	}
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
