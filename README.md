@@ -14,7 +14,6 @@ $ npm install
 #### [npm](https://www.npmjs.com/package/biodic-webpack-starter)
 ```
 $ npm install biodic-webpack-starter
-$ cd 
 $ cp -a node_modules/biodic-webpack-starter/* ./; cp node_modules/biodic-webpack-starter/.* ./
 $ npm install
 
